@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//apps.bdimg.com">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-title" content="记录学习生活">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<title>Django项目之Web端电商网站的实战开发（项目源码）-记录学习生活</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.cdtaogang.club/wp-includes/css/dist/block-library/style.min.css?ver=5.3.18' type='text/css' media='all' />
+<link rel='stylesheet' id='_bootstrap-css'  href='https://www.cdtaogang.club/wp-content/themes/dux-v7.1/css/bootstrap.min.css?ver=7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='_fontawesome-css'  href='https://www.cdtaogang.club/wp-content/themes/dux-v7.1/css/font-awesome.min.css?ver=7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='_main-css'  href='https://www.cdtaogang.club/wp-content/themes/dux-v7.1/css/main.css?ver=7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wppay-css'  href='https://www.cdtaogang.club/wp-content/plugins/wppay/static/css/wppay.css?ver=2.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.cdtaogang.club/wp-content/themes/dux-v7.1/js/libs/jquery.min.js?ver=7.1'></script>
+<link rel='https://api.w.org/' href='https://www.cdtaogang.club/wp-json/' />
+<link rel='prev' title='Django项目之Web端电商网站的实战开发（完结）' href='https://www.cdtaogang.club/445.html' />
+<link rel='next' title='Django项目于之在线教育平台网站的实战开发（一）' href='https://www.cdtaogang.club/450.html' />
+<link rel="canonical" href="https://www.cdtaogang.club/447.html" />
+<link rel="alternate" type="application/json+oembed" href="https://www.cdtaogang.club/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cdtaogang.club%2F447.html" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.cdtaogang.club/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cdtaogang.club%2F447.html&#038;format=xml" />
+	<style type="text/css">
+		.erphp-wppay{
+			border-color: #ff5f33 !important;
+			background-color: #ffffff !important;
+			color: #333333 !important;
+		}
+		.erphp-wppay-success{
+			border-color: #54c468 !important;
+		}
+		.erphp-wppay a{
+			color: #fff !important;
+		}
+		.erphp-wppay b{
+			color: #ff5f33 !important;
+		}
+		.wppay-custom-modal-box .wppay-modal .erphp-wppay-qrcode .tab a .price{
+			color: #ff5f33 !important;
+		}
+				.wppay-custom-modal-box .wppay-modal .erphp-wppay-qrcode .tab-list{
+			background-color: #ff5f33 !important;
+		}
+			</style>
+	<script>window._WPPAY = {"uri":"https://www.cdtaogang.club/wp-content/plugins/wppay", "payment":"1", "author":"mobantu"}</script>
+<meta name="keywords" content="源码下载,项目源码,资源,项目源码">
+<meta name="description" content="温馨提示：以下隐藏内容为《Django项目之Web端电商网站的实战开发》项目源码下载链接地址哟~">
+<link rel="icon" href="https://www.cdtaogang.club/wp-content/uploads/2021/11/favicon64-1.ico" sizes="32x32" />
+<link rel="icon" href="https://www.cdtaogang.club/wp-content/uploads/2021/11/favicon64-1.ico" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.cdtaogang.club/wp-content/uploads/2021/11/favicon64-1.ico" />
+<meta name="msapplication-TileImage" content="https://www.cdtaogang.club/wp-content/uploads/2021/11/favicon64-1.ico" />
+<link rel="shortcut icon" href="https://www.cdtaogang.club/favicon.ico">
+<!--[if lt IE 9]><script src="https://www.cdtaogang.club/wp-content/themes/dux-v7.1/js/libs/html5.min.js"></script><![endif]-->
+<!--通过线上引入fontawesome.com图标库-->
+<!--<script src="https://kit.fontawesome.com/90a9b0e018.js" crossorigin="anonymous"></script>-->
+<!--通过下载fontawesome.com图标库资源包到本地引入-->
+<link href="/wp-content/themes/dux-v7.1/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet"> <!--load all styles 
+<!--网站公告-->
+<!--<script>-->
+<!--    function rec(){-->
+<!--        var msg=confirm('本网站（www.cdtaogang.club）于2021年11月27日开始改版，网站内容迁移至（cdtaogang.top），请点击→确定←按钮即可访问。')-->
+<!--        if(msg==true)-->
+<!--        {-->
+<!--            location.href="https://cdtaogang.top"-->
+<!--        }-->
+<!--        else-->
+<!--        {-->
+            
+<!--        }-->
+
+<!--    }-->
+<!--    rec();-->
+<!--</script> -->
+<!--百度统计-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?74aa6f445b92b40aacd5309fba8b7fde";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--百度收录-->
+<meta name="baidu-site-verification" content="code-njqCvHl025" />
+</head>
+<body class="post-template-default single single-post postid-447 single-format-standard logged-in nav_fixed m-excerpt-cat site-layout-2 text-justify-on m-sidebar thumb-radius m-user-on">
+<header class="header">
+	<div class="container">
+		<div class="logo"><a href="https://www.cdtaogang.club" title="记录学习生活-分享博主在学习、工作以及生活中的点滴、软件开发、软件测试、运维、建站等"><img src="https://www.cdtaogang.club/wp-content/uploads/2021/11/logo.png" alt="记录学习生活-分享博主在学习、工作以及生活中的点滴、软件开发、软件测试、运维、建站等">记录学习生活</a></div>		<div class="brand">陶刚的博客
+<br>与你分享我的点滴</div>		<ul class="site-nav site-navbar">
+			<li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-28"><a href="https://www.cdtaogang.club"><i class="fas fa-home"></i> 首页</a></li>
+<li id="menu-item-129" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-129"><a href="https://www.cdtaogang.club/develop"><i class="fab fa-centercode"></i> 开发类</a>
+<ul class="sub-menu">
+	<li id="menu-item-169" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-169"><a href="https://www.cdtaogang.club/develop/java"><i class="fab fa-java"></i> Java语言</a></li>
+	<li id="menu-item-170" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-170"><a href="https://www.cdtaogang.club/develop/python"><i class="fab fa-python"></i> Python语言</a>
+	<ul class="sub-menu">
+		<li id="menu-item-287" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-287"><a href="https://www.cdtaogang.club/develop/python/django_dev"><i class="fab fa-dyalog"></i> Django</a></li>
+		<li id="menu-item-288" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-288"><a href="https://www.cdtaogang.club/develop/python/flask_dev"><i class="fab fa-foursquare"></i> Flask</a></li>
+	</ul>
+</li>
+	<li id="menu-item-171" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-171"><a href="https://www.cdtaogang.club/develop/go"><i class="fab fa-google-plus"></i> Go语言</a></li>
+</ul>
+</li>
+<li id="menu-item-130" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-130"><a href="https://www.cdtaogang.club/test"><i class="fas fa-bug"></i> 测试类</a>
+<ul class="sub-menu">
+	<li id="menu-item-173" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-173"><a href="https://www.cdtaogang.club/test/test-knowledge"><i class="fas fa-book-open"></i> 基础知识</a></li>
+	<li id="menu-item-174" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-174"><a href="https://www.cdtaogang.club/test/functional-testing"><i class="fas fa-praying-hands"></i> 功能测试</a></li>
+	<li id="menu-item-175" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-175"><a href="https://www.cdtaogang.club/test/interface-testing"><i class="fas fa-sitemap"></i> 接口测试</a></li>
+	<li id="menu-item-176" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-176"><a href="https://www.cdtaogang.club/test/unit-testing"><i class="fas fa-boxes"></i> 单元测试</a></li>
+	<li id="menu-item-177" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-177"><a href="https://www.cdtaogang.club/test/performance-testing"><i class="fas fa-balance-scale"></i> 性能测试</a></li>
+	<li id="menu-item-178" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-178"><a href="https://www.cdtaogang.club/test/special-testing"><i class="fas fa-stamp"></i> 专项测试</a></li>
+	<li id="menu-item-179" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-179"><a href="https://www.cdtaogang.club/test/automation-testing"><i class="fas fa-cogs"></i> 自动化测试</a></li>
+	<li id="menu-item-180" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-180"><a href="https://www.cdtaogang.club/test/no-functional-testing"><i class="fas fa-handshake-slash"></i> 非功能测试</a></li>
+</ul>
+</li>
+<li id="menu-item-131" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-131"><a href="https://www.cdtaogang.club/devops"><i class="fas fa-shield-virus"></i> 运维类</a>
+<ul class="sub-menu">
+	<li id="menu-item-202" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-202"><a href="https://www.cdtaogang.club/devops/databases"><i class="fas fa-database"></i> Databases</a></li>
+	<li id="menu-item-200" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-200"><a href="https://www.cdtaogang.club/devops/docker"><i class="fab fa-docker"></i> Docker</a></li>
+	<li id="menu-item-199" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-199"><a href="https://www.cdtaogang.club/devops/integration-deployment"><i class="fab fa-octopus-deploy"></i> CI/CD</a></li>
+	<li id="menu-item-201" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-201"><a href="https://www.cdtaogang.club/devops/vmware-workstation"><i class="fas fa-box"></i> VMware</a></li>
+</ul>
+</li>
+<li id="menu-item-132" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-132"><a href="https://www.cdtaogang.club/crawler"><i class="fas fa-spider"></i> 爬虫类</a></li>
+<li id="menu-item-133" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-133"><a href="https://www.cdtaogang.club/managed"><i class="fas fa-cloud-upload-alt"></i> 代码托管</a></li>
+<li id="menu-item-145" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-145"><a href="https://www.cdtaogang.club/sources"><i class="fas fa-download"></i> 资源</a>
+<ul class="sub-menu">
+	<li id="menu-item-150" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-150"><a href="https://www.cdtaogang.club/sources/project-source"><i class="fab fa-r-project"></i> 项目源码</a></li>
+</ul>
+</li>
+							<li class="navto-search"><a href="javascript:;" class="search-show active"><i class="fa fa-search"></i></a></li>
+					</ul>
+				<div class="topbar">
+			<ul class="site-nav topmenu">
+				<li id="menu-item-136" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-136"><a href="https://www.cdtaogang.club/wordpress"><i class="fab fa-wordpress"></i> WordPress教程</a></li>
+<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="https://www.cdtaogang.club/navs"><i class="fas fa-location-arrow"></i> 导航</a></li>
+<li id="menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a href="https://www.cdtaogang.club/archives"><i class="fas fa-archive"></i> 归档</a></li>
+<li id="menu-item-114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-114"><a href="https://www.cdtaogang.club/tags"><i class="fas fa-tags"></i> 标签</a></li>
+<li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115"><a href="https://www.cdtaogang.club/readers"><i class="fas fa-book-reader"></i> 读者</a></li>
+<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="https://www.cdtaogang.club/friends"><i class="fas fa-paperclip"></i> 友链</a></li>
+								<li class="menusns menu-item-has-children">
+					<a href="javascript:;">关注我们</a>
+					<ul class="sub-menu">
+						<li><a class="sns-wechat" href="javascript:;" title="关注微信" data-src="https://www.cdtaogang.club/wp-content/uploads/2021/12/wxhy.png">关注微信</a></li>						<li><a target="_blank" rel="external nofollow" href="https://cdtaogang.blog.csdn.net/">CSDN BLOG</a></li><li><a target="_blank" rel="external nofollow" href="https://www.cdtaogang.top/">TG'S BLOG</a></li><li><a target="_blank" rel="external nofollow" href="https://cdtaogang.top/">Git主题</a></li>					</ul>
+				</li>
+							</ul>
+											Hi, sdfasdf									&nbsp; &nbsp; <a rel="nofollow" href="https://www.cdtaogang.club/user">进入会员中心</a>
+													</div>
+							<i class="fa fa-bars m-icon-nav"></i>
+															<a rel="nofollow" href="https://www.cdtaogang.club/user" class="m-icon-user"><i class="fa fa-user"></i></a>
+						</div>
+</header>
+<div class="site-search">
+	<div class="container">
+		<form method="get" class="site-search-form" action="https://www.cdtaogang.club/" ><input class="search-input" name="s" type="text" placeholder="输入关键字" value="" required="required"><button class="search-btn" type="submit"><i class="fa fa-search"></i></button></form>	</div>
+</div>
+	<div class="breadcrumbs">
+		<div class="container">当前位置：<a href="https://www.cdtaogang.club">记录学习生活</a> <small>></small> <a href="https://www.cdtaogang.club/sources">资源</a> <small>></small> 正文</div>
+	</div>
+<section class="container">
+	<div class="content-wrap">
+	<div class="content">
+				<header class="article-header">
+			<h1 class="article-title"><a href="https://www.cdtaogang.club/447.html">Django项目之Web端电商网站的实战开发（项目源码）</a></h1>
+			<div class="article-meta">
+				<span class="item">2021-12-14</span>
+												<span class="item">分类：<a href="https://www.cdtaogang.club/sources" rel="category tag">资源</a> / <a href="https://www.cdtaogang.club/sources/project-source" rel="category tag">项目源码</a></span>
+				<span class="item post-views">阅读(1634)</span>				<span class="item">评论(0)</span>				<span class="item"></span>
+			</div>
+		</header>
+		<article class="article-content">
+									
+<font color="red">温馨提示：</font>以下隐藏内容为《Django项目之Web端电商网站的实战开发》项目源码下载链接地址哟~<hr>
+<div class="erphp-wppay">
+							您需要先支付 <b>30元</b> 才能下载此资源！<a href="javascript:;" class="paydown-buy erphp-wppay-loader" data-post="447">立即支付</a>
+						</div>		</article>
+						            <div class="post-actions">
+            	<a href="javascript:;" etap="like" class="post-like action action-like" data-pid="447"><i class="fa fa-thumbs-o-up"></i>赞(<span>13</span>)</a>            	<a href="javascript:;" class="action action-rewards" data-event="rewards"><i class="fa fa-jpy"></i> 打赏</a>            	            </div>
+        		<div class="post-copyright">版权声明：本文为CSDN博主「cdtaogang」的原创文章，遵循CC 4.0 BY-NC-SA版权协议，转载请附上原文出处链接及本声明：<a href="https://www.cdtaogang.club">记录学习生活</a> &raquo; <a href="https://www.cdtaogang.club/447.html">Django项目之Web端电商网站的实战开发（项目源码）</a></div>		
+					<div class="action-share"><!-- 在头文件中引入依赖 -->
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/social-share.js/1.0.9/css/share.min.css">
+<div class="share-component" data-sites="weibo,qzone,qq,wechat,douban"></div>
+<script src="https://cdn.bootcdn.net/ajax/libs/social-share.js/1.0.9/js/share.min.js"></script>
+<!-- 只要一个div的class是social-share即可，添加到需要显示的位置，内容会自动初始化 --></div>
+		
+		<div class="article-tags">标签：<a href="https://www.cdtaogang.club/tag/%e6%ba%90%e7%a0%81%e4%b8%8b%e8%bd%bd" rel="tag">源码下载</a><a href="https://www.cdtaogang.club/tag/%e9%a1%b9%e7%9b%ae%e6%ba%90%e7%a0%81" rel="tag">项目源码</a></div>
+		
+		
+		            <nav class="article-nav">
+                <span class="article-nav-prev">上一篇<br><a href="https://www.cdtaogang.club/445.html" rel="prev">Django项目之Web端电商网站的实战开发（完结）</a></span>
+                <span class="article-nav-next">下一篇<br><a href="https://www.cdtaogang.club/450.html" rel="next">Django项目于之在线教育平台网站的实战开发（一）</a></span>
+            </nav>
+        
+				<div class="relates relates-imagetext"><div class="title"><h3>相关推荐</h3></div><ul><li><a target="_blank" href="https://www.cdtaogang.club/529.html"><img data-src="https://www.cdtaogang.club/wp-content/uploads/2021/12/zhim-220x150.png" alt="Selenium3与Python3实战开发Web自动化测试框架（项目源码）-记录学习生活" src="https://www.cdtaogang.club/wp-content/themes/dux-v7.1/img/thumbnail.png" class="thumb"></a><a href="https://www.cdtaogang.club/529.html">Selenium3与Python3实战开发Web自动化测试框架（项目源码）</a></li><li><a target="_blank" href="https://www.cdtaogang.club/532.html"><img data-src="https://www.cdtaogang.club/wp-content/uploads/2021/12/jk-1.png" alt="Python接口自动化测试框架实战开发（项目源码）-记录学习生活" src="https://www.cdtaogang.club/wp-content/themes/dux-v7.1/img/thumbnail.png" class="thumb"></a><a href="https://www.cdtaogang.club/532.html">Python接口自动化测试框架实战开发（项目源码）</a></li><li><a target="_blank" href="https://www.cdtaogang.club/481.html"><img data-src="https://www.cdtaogang.club/wp-content/uploads/2021/12/els.png" alt="Django与Elasticsearch交互打造搜索引擎网站（项目源码）-记录学习生活" src="https://www.cdtaogang.club/wp-content/themes/dux-v7.1/img/thumbnail.png" class="thumb"></a><a href="https://www.cdtaogang.club/481.html">Django与Elasticsearch交互打造搜索引擎网站（项目源码）</a></li><li><a target="_blank" href="https://www.cdtaogang.club/468.html"><img data-src="https://www.cdtaogang.club/wp-content/uploads/2021/12/1312-220.png" alt="Django项目于之在线教育平台网站的实战开发（项目源码）-记录学习生活" src="https://www.cdtaogang.club/wp-content/themes/dux-v7.1/img/thumbnail.png" class="thumb"></a><a href="https://www.cdtaogang.club/468.html">Django项目于之在线教育平台网站的实战开发（项目源码）</a></li><li><a target="_blank" href="https://www.cdtaogang.club/430.html"><img data-src="https://www.cdtaogang.club/wp-content/uploads/2021/12/44-220x150.png" alt="Flask项目之个性化微电影网站的实战开发（项目源码）-记录学习生活" src="https://www.cdtaogang.club/wp-content/themes/dux-v7.1/img/thumbnail.png" class="thumb"></a><a href="https://www.cdtaogang.club/430.html">Flask项目之个性化微电影网站的实战开发（项目源码）</a></li><li><a target="_blank" href="https://www.cdtaogang.club/396.html"><img data-src="https://www.cdtaogang.club/wp-content/uploads/2021/12/1-2-220x150.png" alt="Flask项目之手机端租房网站的实战开发（项目源码）-记录学习生活" src="https://www.cdtaogang.club/wp-content/themes/dux-v7.1/img/thumbnail.png" class="thumb"></a><a href="https://www.cdtaogang.club/396.html">Flask项目之手机端租房网站的实战开发（项目源码）</a></li></ul></div>					</div>
+	</div>
+	<div class="sidebar">
+<div class="widget widget_ui_orbui"><div class="item"><a href="https://www.aliyun.com/activity/new?source=5176.11533457&userCode=wjr7omfn" target="_blank"><img src="https://i.imgtg.com/2023/03/27/jtUvx.png"></a></div></div><div class="widget widget_ui_orbui"><div class="item"><a href="https://www.aliyun.com/activity/daily/bestoffer?source=5176.11533457&userCode=wjr7omfn" target="_blank"><img src="https://i.imgtg.com/2023/03/27/jtkOp.png"></a></div></div><div class="widget widget_ui_orbui"><div class="item"><a href="https://cloud.tencent.com/act/cps/redirect?redirect=1040&cps_key=b3aacd2fd26aab9cc8fcde88705bdec7&from=console" target="_blank"><img src="https://i.imgtg.com/2023/03/27/jtxNU.png"></a></div></div><div class="widget widget_ui_orbui"><div class="item"><a href="https://cloud.tencent.com/act/cps/redirect?redirect=1068&cps_key=b3aacd2fd26aab9cc8fcde88705bdec7&from=console" target="_blank"><img src="https://i.imgtg.com/2023/03/27/jtzLY.png"></a></div></div><div class="widget widget_ui_textorbui"><a class="style02" href="https://www.baidu.com/s?wd=%E8%BF%99%E4%BA%BA%E4%B8%BA%E4%BD%95%E5%A6%82%E6%AD%A4%E4%B9%8B%E5%BC%BA"><strong>吐血推荐</strong><h2>tob主题 新一代主题</h2><p>tob 扁平化、简洁风、多功能配置，优秀的电脑、平板、手机支持，响应式布局，不同设备不同展示效果...</p></a></div><div class="widget widget_ui_tags"><h3>热门标签</h3><div class="items"><a href="https://www.cdtaogang.club/tag/python">Python (38)</a><a href="https://www.cdtaogang.club/tag/python%e5%ae%9e%e6%88%98%e5%bc%80%e5%8f%91">Python实战开发 (37)</a><a href="https://www.cdtaogang.club/tag/python-web%e5%bc%80%e5%8f%91">Python Web开发 (33)</a><a href="https://www.cdtaogang.club/tag/%e8%bd%af%e4%bb%b6%e6%b5%8b%e8%af%95">软件测试 (32)</a><a href="https://www.cdtaogang.club/tag/flask">Flask (23)</a><a href="https://www.cdtaogang.club/tag/flask%e5%ae%9e%e6%88%98%e9%a1%b9%e7%9b%ae">Flask实战项目 (23)</a><a href="https://www.cdtaogang.club/tag/%e5%89%8d%e5%90%8e%e7%ab%af%e4%b8%8d%e5%88%86%e7%a6%bb">前后端不分离 (21)</a><a href="https://www.cdtaogang.club/tag/%e6%89%8b%e6%9c%ba%e7%ab%af%e7%bd%91%e7%ab%99%e5%bc%80%e5%8f%91">手机端网站开发 (15)</a><a href="https://www.cdtaogang.club/tag/%e7%a7%9f%e6%88%bf%e7%bd%91%e7%ab%99">租房网站 (15)</a><a href="https://www.cdtaogang.club/tag/django">Django (14)</a><a href="https://www.cdtaogang.club/tag/django%e5%ae%9e%e6%88%98%e9%a1%b9%e7%9b%ae">Django实战项目 (14)</a><a href="https://www.cdtaogang.club/tag/nginx">Nginx (13)</a><a href="https://www.cdtaogang.club/tag/docker">Docker (11)</a><a href="https://www.cdtaogang.club/tag/%e5%89%8d%e5%90%8e%e7%ab%af%e5%88%86%e7%a6%bb">前后端分离 (10)</a><a href="https://www.cdtaogang.club/tag/%e8%87%aa%e5%8a%a8%e5%8c%96%e6%b5%8b%e8%af%95">自动化测试 (10)</a><a href="https://www.cdtaogang.club/tag/unittest">Unittest (9)</a><a href="https://www.cdtaogang.club/tag/%e6%b5%8b%e8%af%95%e7%94%a8%e4%be%8b">测试用例 (9)</a><a href="https://www.cdtaogang.club/tag/%e6%b5%8b%e8%af%95%e8%ae%a1%e5%88%92">测试计划 (8)</a><a href="https://www.cdtaogang.club/tag/%e9%a1%b9%e7%9b%ae%e6%ba%90%e7%a0%81">项目源码 (7)</a><a href="https://www.cdtaogang.club/tag/%e6%ba%90%e7%a0%81%e4%b8%8b%e8%bd%bd">源码下载 (7)</a><a href="https://www.cdtaogang.club/tag/%e8%b4%9f%e8%bd%bd%e5%9d%87%e8%a1%a1">负载均衡 (7)</a><a href="https://www.cdtaogang.club/tag/selenium">Selenium (7)</a><a href="https://www.cdtaogang.club/tag/fastdfs">FastDFS (6)</a><a href="https://www.cdtaogang.club/tag/%e6%94%af%e4%bb%98%e5%ae%9d%e6%94%af%e4%bb%98">支付宝支付 (6)</a><a href="https://www.cdtaogang.club/tag/web%e7%94%b5%e5%95%86%e7%bd%91%e7%ab%99%e5%bc%80%e5%8f%91">Web电商网站开发 (6)</a><a href="https://www.cdtaogang.club/tag/xadmin%e5%90%8e%e5%8f%b0">Xadmin后台 (6)</a><a href="https://www.cdtaogang.club/tag/web%e6%95%99%e8%82%b2%e5%b9%b3%e5%8f%b0%e5%bc%80%e5%8f%91">Web教育平台开发 (6)</a><a href="https://www.cdtaogang.club/tag/github">GitHub (6)</a><a href="https://www.cdtaogang.club/tag/%e7%94%a8%e4%be%8b%e8%ae%be%e8%ae%a1">用例设计 (6)</a><a href="https://www.cdtaogang.club/tag/%e5%8a%9f%e8%83%bd%e6%b5%8b%e8%af%95">功能测试 (6)</a></div></div><div class="widget widget_ui_posts"><h3>热门文章</h3><ul><li><a target="_blank" href="https://www.cdtaogang.club/34.html"><span class="thumbnail"><img data-src="https://www.cdtaogang.club/wp-content/uploads/2021/11/espresso-1-220x150.jpg" alt="支付测试-记录学习生活" src="https://www.cdtaogang.club/wp-content/themes/dux-v7.1/img/thumbnail.png" class="thumb"></span><span class="text">支付测试</span><span class="muted">2021-11-27</span></a></li><li><a target="_blank" href="https://www.cdtaogang.club/453.html"><span class="thumbnail"><img data-src="https://www.cdtaogang.club/wp-content/uploads/2021/12/1312-220.png" alt="Django项目于之在线教育平台网站的实战开发（二）-记录学习生活" src="https://www.cdtaogang.club/wp-content/themes/dux-v7.1/img/thumbnail.png" class="thumb"></span><span class="text">Django项目于之在线教育平台网站的实战开发（二）</span><span class="muted">2021-12-15</span></a></li><li><a target="_blank" href="https://www.cdtaogang.club/520.html"><span class="thumbnail"><img data-src="https://www.cdtaogang.club/wp-content/uploads/2021/12/zhim-220x150.png" alt="Selenium3与Python3实战开发Web自动化测试框架（一）-记录学习生活" src="https://www.cdtaogang.club/wp-content/themes/dux-v7.1/img/thumbnail.png" class="thumb"></span><span class="text">Selenium3与Python3实战开发Web自动化测试框架（一）</span><span class="muted">2021-12-19</span></a></li><li><a target="_blank" href="https://www.cdtaogang.club/658.html"><span class="thumbnail"><img data-src="https://www.cdtaogang.club/wp-content/uploads/2022/01/git_02.png" alt="最新GitHub新手使用教程(Linux/Ubuntu Git从安装到使用)——详细图解-记录学习生活" src="https://www.cdtaogang.club/wp-content/themes/dux-v7.1/img/thumbnail.png" class="thumb"></span><span class="text">最新GitHub新手使用教程(Linux/Ubuntu Git从安装到使用)——详细图解</span><span class="muted">2022-01-12</span></a></li><li><a target="_blank" href="https://www.cdtaogang.club/725.html"><span class="thumbnail"><img data-src="https://www.cdtaogang.club/wp-content/uploads/2022/01/webzdh.png" alt="Web自动化测试实战（四）-记录学习生活" src="https://www.cdtaogang.club/wp-content/themes/dux-v7.1/img/thumbnail.png" class="thumb"></span><span class="text">Web自动化测试实战（四）</span><span class="muted">2022-01-17</span></a></li><li><a target="_blank" href="https://www.cdtaogang.club/340.html"><span class="thumbnail"><img data-src="https://www.cdtaogang.club/wp-content/uploads/2021/12/1-2-220x150.png" alt="Flask项目之手机端租房网站的实战开发（四）-记录学习生活" src="https://www.cdtaogang.club/wp-content/themes/dux-v7.1/img/thumbnail.png" class="thumb"></span><span class="text">Flask项目之手机端租房网站的实战开发（四）</span><span class="muted">2021-12-12</span></a></li></ul></div><div class="widget widget_ui_statistics"><h3>网站统计</h3><ul><li><strong>日志总数：</strong>102</li><li><strong>评论总数：</strong>14</li><li><strong>标签总数：</strong>219</li><li><strong>页面总数：</strong>10</li><li><strong>分类总数：</strong>26</li><li><strong>最后更新：</strong>2023-03-30</li></ul></div></div></section>
+
+
+<footer class="footer">
+	<div class="container">
+						<p>本网站自豪的使用 <a href="https://cn.wordpress.org/" target="_blank" rel="nofollow">WordPress</a> 驱动丨CC共享许可协议: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="nofollow">BY-NC-SA 4.0</a>丨第三方服务由: <a href="https://www.aliyun.com/" target="_blank" rel="nofollow">阿里云</a>、<a href="https://cloud.tencent.com/" target="_blank" rel="nofollow">腾讯云</a>、<a href="https://www.csdn.net/" target="_blank" rel="nofollow">CSDN</a>、<a href="https://freessl.cn/" target="_blank" rel="nofollow">FreeSSL</a>等提供丨<a href="https://www.cdtaogang.club/disclaimer" target="_blank" rel="nofollow">免责声明</a>丨<a href="https://www.cdtaogang.club/ads" target="_blank" rel="nofollow">广告合作</a>丨<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+            <script>
+                var now = new Date(); 
+                function createtime() { 
+                    var grt= new Date("11/10/2020 14:00:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+                    now.setTime(now.getTime()+250); 
+                    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                    document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+                    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+                } 
+            setInterval("createtime()",250);
+          </script><!--   丨<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1280663688'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1280663688%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script> -->
+        </p>
+		<p>&copy; 2020-2025 &nbsp;<a href="https://www.cdtaogang.club">记录学习生活</a> &nbsp;All Rights Reserved丨<img src="/wp-content/uploads/2021/12/icp.png" style="margin-bottom:8px;" alt="ICP"> <a href="https://beian.miit.gov.cn" target="_blank" title="备案号">蜀ICP备2020032132号-1</a>丨<img src="/wp-content/uploads/2021/12/gongan.png" style="margin-bottom:6px;" alt="ICP"> <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010602001564" target="_blank" title="公安备案">川公网安备 51010602001564号</a>丨本页生成数据库 80 次查询，耗时 0.225 秒，使用 24.43MB 内存</p>
+			</div>
+</footer>
+
+	<div class="rewards-popover-mask" data-event="rewards-close"></div>
+	<div class="rewards-popover">
+		<h3>觉得文章有用就打赏一下文章作者<br><h5>非常感谢你的打赏，我们将继续给力更多优质内容，让我们一起创建更加美好的网络世界！</h5></h3>
+				<div class="rewards-popover-item">
+			<h4>支付宝扫一扫打赏</h4>
+			<img src="https://www.cdtaogang.club/wp-content/uploads/2021/12/z1.png">
+		</div>
+						<div class="rewards-popover-item">
+			<h4>微信扫一扫打赏</h4>
+			<img src="https://www.cdtaogang.club/wp-content/uploads/2021/12/w1.png">
+		</div>
+				<span class="rewards-popover-close" data-event="rewards-close"><i class="fa fa-close"></i></span>
+	</div>
+
+<div class="rollbar rollbar-rb"><ul><li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1126331350&site=qq&menu=yes"><i class="fa fa-qq"></i><span>QQ咨询</span></a><h6>QQ咨询<i></i></h6></li><li class="rollbar-qrcode"><a href="javascript:;"><i class="fa fa-qrcode"></i><span>关注微信</span></a><h6>关注微信<span class="copy-wechat-wrap">：themebetter<br><span data-id="themebetter" class="copy-wechat-number">复制微信号</span></span><img src="https://www.cdtaogang.club/wp-content/uploads/2021/12/wxhy.png"><i></i></h6></li><li class="rollbar-totop"><a href="javascript:(TBUI.scrollTo());"><i class="fa fa-angle-up"></i><span>回顶部</span></a><h6>回顶部<i></i></h6></li></ul></div>
+<script>window.TBUI={"www":"https:\/\/www.cdtaogang.club","uri":"https:\/\/www.cdtaogang.club\/wp-content\/themes\/dux-v7.1","ver":"7.1","roll":"1 2","ajaxpager":"0","fullimage":"1","url_rp":"https:\/\/www.cdtaogang.club\/forgetpassword","captcha":0,"captcha_appid":"2095498688","captcha_comment":1}</script>
+<script>
+$(function(){
+    let preList = $(".article-content pre")
+    for (let pre of Array.from(preList)){
+        let btn = $("<span class=\"btn-pre-copy\" onclick='preCopy(this)'>复制代码</span>");
+        btn.prependTo(pre);
+    }
+    //给每一串代码元素增加复制代码节点
+    // let preList = document.getElementById("prettyprint");
+    // alert(preList);
+    // let preList = $(".article-content pre");
+    // alert(preList);
+    // // let preList = $("#");
+    // for (let pre of preList) {
+    //     //给每个代码块增加上“复制代码”按钮
+    //     let btn = $("<span class=\"btn-pre-copy\" onclick='preCopy(this)'>复制代码</span>");
+    //     btn.prependTo(pre);
+    // }
+});
+
+/**
+    * 执行复制代码操作
+    * @param obj
+    */
+function preCopy(obj) {
+    //执行复制
+    let btn = $(obj);
+    let pre = btn.parent();
+    //为了实现复制功能。新增一个临时的textarea节点。使用他来复制内容
+    let temp = $("<textarea></textarea>");
+    //避免复制内容时把按钮文字也复制进去。先临时置空
+    btn.text("");
+    temp.text(pre.text());
+    temp.appendTo(pre);
+    temp.select();
+    document.execCommand("Copy");
+    temp.remove();
+    //修改按钮名
+    btn.text("复制成功");
+    //一定时间后吧按钮名改回来
+    setTimeout(()=> {
+        btn.text("复制代码");
+    },1500);
+}
+</script>
+<script type='text/javascript' src='https://www.cdtaogang.club/wp-content/themes/dux-v7.1/js/libs/bootstrap.min.js?ver=7.1'></script>
+<script type='text/javascript' src='https://www.cdtaogang.club/wp-content/themes/dux-v7.1/js/loader.js?ver=7.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wppay_ajax_url = "https:\/\/www.cdtaogang.club\/wp-admin\/admin-ajax.php";
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.cdtaogang.club/wp-content/plugins/wppay/static/js/wppay.js?ver=2.1'></script>
+<script type='text/javascript' src='https://www.cdtaogang.club/wp-includes/js/wp-embed.min.js?ver=5.3.18'></script>
+</body>
+</html>
